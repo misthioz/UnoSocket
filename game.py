@@ -6,9 +6,11 @@ class Game:
         self.player2 = player2
         self.player3 = player3
         self.player4 = player4
+        self.previous_card = None
+
 
     def play(self):
         self.player1.print_cards()
         print("Game started")
-        self.player1.prompt_card()
+        self.player1.prompt_card(self.previous_card)
         self.player1.print_cards()
