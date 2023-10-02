@@ -5,10 +5,10 @@ class Card:
         self.power = power
 
     def __str__(self):
-        return f"{self.get_card_text} - {self.color}"
-    def __repr__(self):
+        return f"{self.get_card_text()} - {self.color}"
 
-        return f"{self.get_card_text} - {self.color}"
+    def __repr__(self):
+        return f"{self.get_card_text()} - {self.color}"
     
     def get_card_text(self):
         if self.number == 0:

@@ -13,6 +13,7 @@ class Player:
     def prompt_card(self):
         card = input("Type the card you want to play (format: number/name - color): ")
         while not self.check_card(card):
+            print("Card not found!")
             card = input("Type the card you want to play (format: number/name - color): ")
         
         self.remove_card(card)
@@ -21,9 +22,9 @@ class Player:
 
     def check_card(self, card: str):
         for c in self.cards:
-            if c.str(c) == card:
+            if str(c) == card:
                 return True
-            return False
+        return False
 
 
     def remove_card(self, card: str):
